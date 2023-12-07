@@ -290,7 +290,7 @@ export const NumberMode = () => {
           </div>
         </header>
         <main className="mt-20">
-          <div className={`grid grid-cols-${boardSize} place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]`}>
+          <div className={`grid grid-cols-${boardSize?.toString()} place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]`}>
             {digits.map((digit, index) => (
               <div
                 onClick={() => {
