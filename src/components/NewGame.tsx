@@ -7,7 +7,7 @@ export const NewGame = () => {
 
   const [gameType, setGameType] = useState<string>('numbers')
   const [playerNumber, setPlayerNumber] = useState<number>(1)
-  const [boardSize, setBoardSize] = useState<number>(4)
+  const [boardSize, setBoardSize] = useState<string>('4')
 
   return (
     <>
@@ -38,8 +38,8 @@ export const NewGame = () => {
           <div>
             <p className="text-[15px] text-[#7191A5] font-bold mt-6 md:mt-8 md:text-[20px]">Grid Size</p>
             <div className="flex items-center gap-3 mt-3 md:mt-4 md:gap-[30px]">
-              <button onClick={() => {setBoardSize(4)}} className={`w-[134px] md:w-[256px] md:h-[52px] h-10 md:text-[26px] text-[#FCFCFC] text-[16px] font-bold rounded-3xl ${boardSize === 4 ? 'bg-[#152938]' : 'bg-[#BCCED9] hover:bg-[#6395B8]'}`}>4x4</button>
-              <button onClick={() => {setBoardSize(6)}} className={`w-[134px] md:w-[256px] md:h-[52px] h-10 md:text-[26px] text-[#FCFCFC] text-[16px] font-bold rounded-3xl ${boardSize === 6 ? 'bg-[#152938]' : 'bg-[#BCCED9] hover:bg-[#6395B8]'}`}>6x6</button>
+              <button onClick={() => {setBoardSize("4")}} className={`w-[134px] md:w-[256px] md:h-[52px] h-10 md:text-[26px] text-[#FCFCFC] text-[16px] font-bold rounded-3xl ${boardSize === "4" ? 'bg-[#152938]' : 'bg-[#BCCED9] hover:bg-[#6395B8]'}`}>4x4</button>
+              <button onClick={() => {setBoardSize("6")}} className={`w-[134px] md:w-[256px] md:h-[52px] h-10 md:text-[26px] text-[#FCFCFC] text-[16px] font-bold rounded-3xl ${boardSize === "6" ? 'bg-[#152938]' : 'bg-[#BCCED9] hover:bg-[#6395B8]'}`}>6x6</button>
             </div>
           </div>
           <Link to={`/game/${gameType}/${playerNumber.toString()}/${boardSize}`}>

@@ -74,7 +74,7 @@ export const IconMode = () => {
   }, [playerNumber]);
 
   useEffect(() => {
-    if (Number(boardSize) === 6) {
+    if (boardSize === "6") {
       setTest(18)
     } 
     setIcons(generateIcons())
@@ -311,7 +311,7 @@ const resetTurn = () => {
           </div>
         </header>
         <main className="mt-20">
-          <div className={`grid grid-cols-${boardSize?.toString()} place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]`}>
+          <div className={`grid grid-cols-${boardSize} place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]`}>
             {icons.map((icon, index) => (
               <div
                 onClick={() => {
