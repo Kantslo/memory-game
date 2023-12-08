@@ -7,7 +7,7 @@ export const NewGame = () => {
 
   const [gameType, setGameType] = useState<string>('numbers')
   const [playerNumber, setPlayerNumber] = useState<number>(1)
-  const [boardSize, setBoardSize] = useState<number>(4)
+  const [boardSize, setBoardSize] = useState<number | null>(4)
 
   return (
     <>
