@@ -292,7 +292,7 @@ export const NumberMode = () => {
           </div>
         </header>
         <main className="mt-20">
-          <div className={`grid grid-cols-${boardSize} place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]`}>
+          <div style={{gridTemplateColumns: `repeat(${boardSize}, minmax(0, 1fr))`}} className="grid place-items-center gap-[9px] md:gap-4 mx-auto w-[327px] md:w-[532px] h-[327px] md:h-[532px]">
             {digits.map((digit, index) => (
               <div
                 onClick={() => {
@@ -311,7 +311,7 @@ export const NumberMode = () => {
         </main>
         <section className="font-atkinson mt-[100px] relative">
           {Number(playerNumber) > 1 && (
-            <div className="flex items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-6 pb-20">
               {players.map((player) => (
                 <div key={player.number} className="relative">
                   <div className={`w-16 h-[70px] md:w-[164px] x:w-[255px] x:h-[91px] md:h-[92px] flex flex-col px-4 items-center md:items-start justify-evenly rounded-lg ${player.currentTurn ? 'bg-[#FDA214]' : 'bg-[#DFE7EC]'}`}>
